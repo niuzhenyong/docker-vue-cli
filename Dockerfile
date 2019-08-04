@@ -1,4 +1,4 @@
-FROM node:10.14.2-alpine
+FROM node:12.7.0-alpine
 
 LABEL maintainer Niu Zhenyong <niuzhenyong@qq.com>
 
