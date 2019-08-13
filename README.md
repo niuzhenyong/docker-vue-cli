@@ -1,6 +1,6 @@
 ## docker-vue-cli
 
-该镜像是在 Docker 官方 Node 镜像的基础上增加了 vue-cli 包而成。假设项目的代码存放在 /app 目录中，镜像默认会启动 npm run serve 命令，该镜像默认在 8080 端口对外提供服务。
+该镜像是在 Docker 官方 Node 镜像的基础上增加了 vue-cli 包而成。假设项目的代码存放在 /app 目录中，镜像默认会启动 yarn serve 命令，该镜像默认在 8080 端口对外提供服务。
 
 ### 在命令行中直接使用
 在你使用的是 bash 或者 zsh， 那么最简单的方式是在 .bashrc 或者 .zshrc 文件中增加以下内容：
@@ -31,7 +31,7 @@ docker run -it --rm --init -v "$PWD":"$PWD" -w "$PWD"  -u "$(id -u)" -p 8000:800
 需要在你的项目顶级目录中，增加一个 docker-compose.yaml 文件，文件的内容大体如下：
 
 ```
-version: '2'
+version: '3.7'
 services:
   web:
     image: niuzhenyong/vue-cli
